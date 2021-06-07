@@ -89,6 +89,11 @@ img {
 .site-header{
   background-color: var(--color-white);
   height: 80px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .site-header__wrapper{
@@ -106,6 +111,12 @@ img {
   padding: 0;
   align-items: center;
   width: 139px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.site-header__logo:hover {
+opacity: 0.7;
 }
 .site-nav__list {
   display: flex;
@@ -182,11 +193,15 @@ img {
 
 
 .generation-part {
+  position: relative;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color-1) ;
   padding-bottom: 170px;
   margin-top: 10px;
+  background-image: url("../img/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 607px) -252px;
 }
 
 
@@ -228,5 +243,14 @@ margin-bottom: 24px;
 .generation-part__button:hover{
   mix-blend-mode: normal;
   opacity: 0.4;
+}
+
+
+.generation-part__phone{
+  position: absolute;
+  top:-10%;
+  left: 52%;
+  z-index: 99;
+  overflow: hidden;
 }
 
