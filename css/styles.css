@@ -1,0 +1,232 @@
+:root{
+  --color-white:#ffffff;
+  --bg-color-1:#f2f2f2;
+  --bg-color-2:#F4F5F7;
+  --color-blue:#2D314D;
+  --text-color:#9597A5;
+  --color-green:linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+  --color-black:#000;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Medium.woff2") format("woff2"),
+  url("../fonts/PublicSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Thin.woff2") format("woff2"),
+  url("../fonts/PublicSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"),
+  url("../fonts/PublicSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Public Sans" ,"Arial", sans-serif;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-style: normal;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SITE HEADER */
+
+.site-header{
+  background-color: var(--color-white);
+  height: 80px;
+}
+
+.site-header__wrapper{
+  display: flex;
+}
+
+.logo__wrapper{
+  padding: 0;
+  margin: 0;
+  margin-top: 33px;
+}
+
+.site-header__logo {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  width: 139px;
+}
+.site-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 251px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.site-nav__items {
+  padding-bottom: 20px;
+}
+
+.site-nav__link:hover{
+  border-bottom: 4px solid #33D35E;
+  color: var(--color-black) ;
+}
+
+.site-nav__items:not(:first-child){
+  margin-left: 30px;
+}
+
+.site-nav__link {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.107692px;
+  color: var(--text-color);
+  text-decoration: none;  
+  padding-bottom: 28px;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s ease;
+}
+.button {
+  display: flex;  
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  background-image: var(--color-green);
+  border-radius: 22px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  
+}
+.site-nav__button {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;  
+  color:var(--color-white);
+  padding: 8px 36px 8px 32px;
+  white-space: nowrap;  
+}
+
+
+.button__wrapper{
+  margin-left: auto;
+  margin-top: 18px;
+}
+
+.site-nav__button:hover{
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+
+/* GENERATION SECTION  */
+
+
+.generation-part {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color-1) ;
+  padding-bottom: 170px;
+  margin-top: 10px;
+}
+
+
+.content-part {
+  margin: 0;
+  padding: 0;
+  width: 447px;
+  margin-top: 170px;
+}
+.content-part__header {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+font-size: 56px;
+line-height: 64px;
+letter-spacing: -1px;
+color: var(--color-blue);
+margin-bottom: 24px;
+}
+.content-part__desc {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 28px; 
+  letter-spacing: -0.28125px;  
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+
+.generation-part__button {
+  display: inline-block;
+  align-items: center;
+  padding: 8px 36px 8px 32px;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+}
+.generation-part__button:hover{
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+

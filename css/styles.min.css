@@ -1,0 +1,305 @@
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.woff2") format('woff2')
+    url("../fonts/Roboto-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Medium.woff2") format('woff2'),
+    url("../fonts/Roboto-Medium.woff") format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.woff2") format('woff2'),
+    url("../fonts/Roboto-Bold.woff") format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto" ,"Arial", sans-serif;
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding-top: 20px;
+    background-color: rgb(124, 82, 82);
+  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+/* OVERLAY */
+
+
+.section {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.box {
+  background-color: #CBE2FF;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 10px;
+}
+
+
+
+.avatar-svg{
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 100%;
+}
+
+/* OVERLAY ALL */
+.overlay{
+  position: absolute;
+  overflow: hidden;
+  background-color: dodgerblue; 
+  transition: 0.5s ease;
+}
+
+
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+ left: 50%;
+ transform:translate(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+
+.overlay-1{
+  position: absolute;
+  bottom: 100%;
+  overflow: hidden;
+  background-color: dodgerblue;
+  height: 0;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+
+
+.box-1:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+
+/* box-2 */
+
+
+.overlay-2{
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
+  background-color: dodgerblue;
+  height: 0;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+
+.box-2:hover .overlay {
+  top: 0;
+  height: 100%;
+}
+
+
+
+/* Box-3 */
+
+
+.overlay-3{
+  position: absolute;
+  left: 100%;
+  overflow: hidden;
+  background-color: dodgerblue;
+  height: 100%;
+  width: 0;
+  transition: 0.5s ease;
+  top: 0;
+}
+
+
+.box-3:hover .overlay {
+  left: 0;
+  width: 100%;
+}
+
+/* box-4 */
+
+
+.overlay-4{
+  position: absolute;
+  right: 100%;
+  overflow: hidden;
+  background-color: dodgerblue;
+  height: 100%;
+  width: 0;
+  transition: 0.5s ease;
+  top: 0;
+}
+
+
+.box-4:hover .overlay {
+  right: 0;
+  width: 100%;
+}
+
+/* box-5 */
+
+.overlay-5{
+  position: absolute;
+  overflow: hidden;
+  background-color: dodgerblue;
+ opacity: 0;
+  transition: 0.5s ease;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.box-5:hover .overlay {
+ opacity: 1;
+}
+
+
+
+
+/* box-6 */
+
+.overlay-6{
+  position: absolute;
+  overflow: hidden;
+ 
+  opacity: 0;
+  transition: 0.5s ease;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.box-6:hover .avatar-6{
+  opacity: 0.3;
+}
+.box-6:hover .overlay-6{
+  opacity: 1;
+}
+
+/*  */
+
+.text-john{
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  position: absolute;
+}
+
+.avatar-6{
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
+/* box-7 */
+
+.overlay-7{
+  position: absolute;
+  overflow: hidden;
+  background-color: dodgerblue;
+  transition: 0.4s ease;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0);
+}
+
+.box-7:hover .overlay {
+ transform: scale(1);
+}
+
+
