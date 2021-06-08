@@ -1,11 +1,12 @@
 :root{
   --color-white:#ffffff;
-  --bg-color-1:#f2f2f2;
+  --bg-color-1:#fafafafa;
   --bg-color-2:#F4F5F7;
   --color-blue:#2D314D;
   --text-color:#9597A5;
   --color-green:linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
   --color-black:#000;
+  --link-hover:#30C88F;
 }
 
 @font-face {
@@ -58,6 +59,7 @@ body {
   overflow-x: hidden;
   font-style: normal;
   font-weight: normal;
+  background-color:var(--bg-color-1) ;
 }
 
 img {
@@ -116,7 +118,7 @@ img {
 }
 
 .site-header__logo:hover {
-opacity: 0.7;
+  opacity: 0.7;
 }
 .site-nav__list {
   display: flex;
@@ -166,6 +168,11 @@ opacity: 0.7;
   text-decoration: none;
   
 }
+
+.button:hover{
+  opacity: 0.4;
+  background-color: var(--color-white);
+}
 .site-nav__button {
   padding: 0;
   margin: 0;
@@ -197,11 +204,11 @@ opacity: 0.7;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color-1) ;
-  padding-bottom: 170px;
   margin-top: 10px;
   background-image: url("../img/bg-desktop.svg");
   background-repeat: no-repeat;
-  background-position: calc(50% + 607px) -252px;
+  background-position: calc(50% + 570px) -180px;
+  padding-bottom: 170px;
 }
 
 
@@ -215,11 +222,11 @@ opacity: 0.7;
   margin: 0;
   padding: 0;
   font-weight: 100;
-font-size: 56px;
-line-height: 64px;
-letter-spacing: -1px;
-color: var(--color-blue);
-margin-bottom: 24px;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: var(--color-blue);
+  margin-bottom: 24px;
 }
 .content-part__desc {
   margin: 0;
@@ -248,9 +255,294 @@ margin-bottom: 24px;
 
 .generation-part__phone{
   position: absolute;
-  top:-10%;
+  top:-9%;
   left: 52%;
   z-index: 99;
   overflow: hidden;
 }
 
+
+/* WHY WE CHOOSE EASYBANK */
+
+
+.why-section {
+  background-color: var(--bg-color-2);
+  padding-bottom: 94px;
+}
+
+.why-title {
+  width: 635px;
+  margin: 0;
+  padding: 0;
+  margin-top: 96px;
+}
+.why-title__header {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 64px;
+  letter-spacing: -0.714286px;
+  color: var(--color-blue);
+}
+.why-title__desc {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.28125px;
+  color: var(--text-color);
+  margin-top: 16px;
+}
+
+.why-column {
+  padding: 0;
+  margin: 0;
+  margin-top: 72px;
+  display: flex;
+  list-style: none;
+}
+.why-column__items {
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-column__items~.why-column__items{
+  margin-left: 30px;
+}
+
+.column-items__header {
+  margin: 0;
+  padding: 0;   
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 40px;
+  color: var(--color-blue);
+}
+
+.why-column__items::before{
+  content: "";
+  background-size:contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 72px;
+  height: 72px;
+}
+
+.card-banking::before{
+  background-image: url(../img/online\ banking.svg);
+  background-repeat: no-repeat;
+}
+
+.card-budgeting::before{
+  background-image: url(../img/simple\ budgetting.svg);
+  background-repeat: no-repeat;
+}
+
+
+.card-onboarding::before{
+  background-image: url(../img/fast\ onboarding.svg);
+  background-repeat: no-repeat;
+}
+
+
+.card-api::before{
+  background-image: url(../img/open\ api.svg);
+  background-repeat: no-repeat;
+}
+
+
+.column-items__desc {
+  margin: 0;
+  padding: 0;
+  margin-top: 26px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
+  letter-spacing: -0.25px;
+}
+
+
+/*  ARTICLES SECTION */
+
+
+.articles-part {
+  background-color: var(--bg-color-1);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.articles-part__header{
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 64px;
+  letter-spacing: -0.714286px;
+  color: #2D314D;
+}
+
+.articles-part__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+}
+.articles-part__items {
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  padding-bottom: 24px;
+}
+
+.articles-part__items~.articles-part__items{
+  margin-left: 30px;
+}
+
+.articles-part__img {
+  width: 255px;
+  height: 200px;
+}
+.by-whom {
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: -0.15625px;
+  color: #9597A5;
+  margin-top: 25px;
+  margin-left: 24px;
+}
+
+.articles-box {
+  width: 207px;
+  margin-top: 8px;
+  margin-left: 24px;
+}
+
+.articles-box__link {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.285714px;
+  color: var(--color-blue);
+  transition: 0.3s ease;
+}
+
+.articles-box__link:hover{
+  color: var(--link-hover);
+}
+
+
+
+
+.articles-box__desc {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.203125px;
+  color: #9597A5;
+  margin-top: 8px;
+}
+
+
+
+
+/* FOOTER */
+
+.site-footer{
+  background-color: var(--color-blue);
+  padding: 48px 0;
+}
+.site-footer__wrapper{
+  width: 1110px;
+  display: flex;
+}
+
+
+.site-footer__logo{
+  transition: 0.3s ease;
+  display: flex;
+}
+
+.site-footer__logo:hover {
+  opacity: 0.7;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-top: 55px;
+  
+}
+
+.socials_items{
+  
+}
+
+.socials_items~.socials_items{
+  margin-left: 13.3px;
+}
+
+.socials_links{
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.socials_links:hover{
+  color: var(--link-hover);
+}
+
+
+
+.footer__nav-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 131px;
+}
+.footer__nav-item ~ .footer__nav-item{
+  margin-top: 8px;
+}
+.footer__nav-link{
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: -0.234375px;
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+.footer__nav-link:hover{
+  color: var(--link-hover);
+}
+
+.footer__desc{
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: -0.234375px;
+  color: var(--color-white);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 24px;
+}
+.footer__button-desc{
+  margin-left: auto;
+}
+
+.footer-button{
+  padding: 8px 36px 8px 33px;
+  color: var(--color-white);
+  display: inline-block;
+  margin-left: 60px;
+}
